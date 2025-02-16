@@ -11,9 +11,14 @@ connectDB();
 // Middleware
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 // Routes
 app.use('/api/weather', require('./routes/weatherRoutes')); // Weather routes
 app.use('/api/books', require('./routes/bookRoutes')); // Books routes
+
 
 // Start server
 app.listen(port, () => {
