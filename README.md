@@ -1,22 +1,32 @@
-Как запускать (Running the Project)
-Run the server:
 
-You can start the server using:
+## Prerequisites
+- **Node.js**
+- **npm**
+- A MongoDB account (or local MongoDB instance)
 
-bash
+## Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/raibaebe/webassignments.git
+cd your-repository-folder
+
+
+### 2. Install dependencies
+npm install
+
+
+### 3. config 
+PORT=5000
+MONGO_URI=mongodb+srv://mongodb:0000@cluster0.oxlmv.mongodb.net/
+WEATHER_API_KEY=786c47c546e3b726f5a265ab66194c9b
+
+### 4. run
+node index.js
+or
 npm start
-Access the API endpoints:
-
+### API Endpoints
 Weather API: http://localhost:5000/api/weather
 Books API: http://localhost:5000/api/books
-The server will listen on the port specified in your .env file (default is 5000).
-
-Troubleshooting
-MongoDB Connection:
-Ensure the MONGO_URI in the .env file is correct and your MongoDB service is running.
-
-Dependencies:
-Verify that all dependencies are installed correctly by checking the output of npm install.
-
-Environment Variables:
-If the server fails to start, double-check your .env file for typos or missing values.
+### LIVE on RENDER
+View the live application at: https://webassignments.onrender.com
